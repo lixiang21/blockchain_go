@@ -1,2 +1,7 @@
 *.db
 *.dat
+pkg/
+log/
+vendor/
+output
+.DS_Store
