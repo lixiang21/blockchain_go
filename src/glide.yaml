@@ -1,0 +1,4 @@
+package: ygoh
+import:
+- package: github.com/boltdb/bolt
+- package: golang.org/x/crypto/ripemd160
