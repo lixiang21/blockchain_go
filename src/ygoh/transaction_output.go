@@ -7,8 +7,10 @@ import (
 )
 
 // TXOutput represents a transaction output
+// 在比特币中，value 字段存储的是 satoshi 的数量，而不是 BTC 的数量。
+// 一个 satoshi 等于一百万分之一的 >BTC(0.00000001 BTC)，这也是比特币里面最小的货币单位
 type TXOutput struct {
-	Value      int
+	Value      int // 存储币
 	PubKeyHash []byte
 }
 

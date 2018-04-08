@@ -12,6 +12,9 @@ var (
 	maxNonce = math.MaxInt64
 )
 
+// TODO 需要动态调整该值
+// “target bits” 代表了区块头里存储的难度
+// 这里的 16 指的是算出来的哈希前 16 位必须是 0
 const targetBits = 16
 
 // ProofOfWork represents a proof-of-work

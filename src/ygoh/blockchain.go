@@ -154,6 +154,7 @@ func (bc *Blockchain) FindTransaction(ID []byte) (Transaction, error) {
 }
 
 // FindUTXO finds all unspent transaction outputs and returns transactions with spent outputs removed
+// 未花费（unspent） 指的是这个输出还没有被包含在任何交易的输入中，或者说没有被任何输入引用
 func (bc *Blockchain) FindUTXO() map[string]TXOutputs {
 	UTXO := make(map[string]TXOutputs)
 	spentTXOs := make(map[string][]int)

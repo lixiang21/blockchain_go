@@ -17,6 +17,7 @@ const commandLength = 12
 
 var nodeAddress string
 var miningAddress string
+// 中心节点的地址硬编码
 var knownNodes = []string{"localhost:3000"}
 var blocksInTransit = [][]byte{}
 var mempool = make(map[string]Transaction)
@@ -430,6 +431,7 @@ func StartServer(nodeID, minerAddress string) {
 	bc := NewBlockchain(nodeID)
 
 	if nodeAddress != knownNodes[0] {
+		fmt.Printf("%s not knownNodes, do sendVersion.", nodeAddress)
 		sendVersion(knownNodes[0], bc)
 	}
 
